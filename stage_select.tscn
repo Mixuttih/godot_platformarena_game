@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwtyx633588ma"]
+
+[ext_resource type="Script" path="res://stage_select.gd" id="1_1egu4"]
+
+[node name="Stage_select" type="Node2D"]
+script = ExtResource("1_1egu4")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 64.0
+offset_right = 1920.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 60
+text = "Select a stage"
+horizontal_alignment = 1
+
+[node name="Stage1" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 256.0
+offset_right = 1088.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 60
+text = "Stage 1"
+
+[node name="Stage2" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 384.0
+offset_right = 1088.0
+offset_bottom = 475.0
+theme_override_font_sizes/font_size = 60
+text = "Stage 2"
+
+[connection signal="pressed" from="Stage1" to="." method="_on_stage_1_pressed"]
+[connection signal="pressed" from="Stage2" to="." method="_on_stage_2_pressed"]

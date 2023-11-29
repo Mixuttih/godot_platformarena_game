@@ -1,0 +1,106 @@
+[gd_scene load_steps=2 format=3 uid="uid://76e4uoyckctu"]
+
+[ext_resource type="Script" path="res://1p_hud.gd" id="1_km45a"]
+
+[node name="1p_hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_km45a")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 91.0
+step = 1.0
+value = 100.0
+rounded = true
+
+[node name="HealthText" type="Label" parent="HealthBar"]
+layout_mode = 0
+offset_left = -60.0
+offset_right = -8.0
+offset_bottom = 26.0
+text = "Health
+"
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 104.0
+offset_right = 384.0
+offset_bottom = 131.0
+value = 100.0
+
+[node name="StaminaText" type="Label" parent="StaminaBar"]
+layout_mode = 0
+offset_left = -72.0
+offset_right = -8.0
+offset_bottom = 26.0
+text = "Stamina"
+
+[node name="PowerBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 144.0
+offset_right = 168.0
+offset_bottom = 171.0
+
+[node name="PowerText" type="Label" parent="PowerBar"]
+layout_mode = 0
+offset_left = -57.0
+offset_right = -8.0
+offset_bottom = 26.0
+text = "Power"
+
+[node name="RematchButton" type="Button" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 768.0
+offset_top = 320.0
+offset_right = 1088.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 50
+text = "Rematch"
+
+[node name="ResetButton" type="Button" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 768.0
+offset_top = 512.0
+offset_right = 1088.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 50
+text = "Reset"
+
+[node name="P1_wins" type="Label" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 592.0
+offset_top = 144.0
+offset_right = 1263.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 100
+text = "Player 1 WINS"
+
+[node name="P2_wins" type="Label" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 592.0
+offset_top = 144.0
+offset_right = 1263.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 100
+text = "Player 2 WINS"
+
+[connection signal="pressed" from="RematchButton" to="." method="_on_rematch_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

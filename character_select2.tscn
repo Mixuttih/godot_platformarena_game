@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://rcjmqjj0du6y"]
+
+[ext_resource type="Script" path="res://character_select2.gd" id="1_3c1tq"]
+
+[node name="Character_select" type="Node2D"]
+script = ExtResource("1_3c1tq")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 64.0
+offset_right = 1920.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 60
+text = "Select Player 2 character"
+horizontal_alignment = 1
+
+[node name="Character1" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 896.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 60
+toggle_mode = true
+text = "Character 1"
+
+[node name="Character2" type="Button" parent="."]
+offset_left = 1024.0
+offset_top = 256.0
+offset_right = 1408.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 60
+toggle_mode = true
+text = "Character 2"
+
+[node name="Character3" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 475.0
+theme_override_font_sizes/font_size = 60
+toggle_mode = true
+text = "Character 3"
+
+[node name="Confirm" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 576.0
+offset_right = 1088.0
+offset_bottom = 639.0
+theme_override_font_sizes/font_size = 40
+text = "Confirm"
+
+[node name="Char1_taken" type="Label" parent="."]
+visible = false
+offset_left = 520.0
+offset_top = 240.0
+offset_right = 888.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 40
+text = "Character 1 chosen by Player 1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Char2_taken" type="Label" parent="."]
+visible = false
+offset_left = 1032.0
+offset_top = 240.0
+offset_right = 1400.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 40
+text = "Character 2 chosen by Player 1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Char3_taken" type="Label" parent="."]
+visible = false
+offset_left = 512.0
+offset_top = 368.0
+offset_right = 880.0
+offset_bottom = 488.0
+theme_override_font_sizes/font_size = 40
+text = "Character 3 chosen by Player 1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Return" type="Button" parent="."]
+offset_left = 896.0
+offset_top = 704.0
+offset_right = 1024.0
+offset_bottom = 754.0
+theme_override_font_sizes/font_size = 30
+text = "Return"
+
+[connection signal="pressed" from="Character1" to="." method="_on_character_1_pressed" flags=18]
+[connection signal="pressed" from="Character2" to="." method="_on_character_2_pressed" flags=18]
+[connection signal="pressed" from="Character3" to="." method="_on_character_3_pressed" flags=18]
+[connection signal="pressed" from="Confirm" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
