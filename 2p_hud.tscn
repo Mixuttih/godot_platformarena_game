@@ -60,6 +60,7 @@ text = "Power"
 [node name="RematchButton" type="Button" parent="."]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = 768.0
 offset_top = 320.0
 offset_right = 1088.0
@@ -70,6 +71,7 @@ text = "Rematch"
 [node name="ResetButton" type="Button" parent="."]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = 768.0
 offset_top = 512.0
 offset_right = 1088.0

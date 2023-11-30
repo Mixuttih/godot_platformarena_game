@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const DASH = SPEED * 10
@@ -16,6 +17,10 @@ var stamina = 100
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	var particles_trs = load("res://particles.tscn")
+	var particles = particles_trs.instantiate()
+	add_child(particles)
 
 func _physics_process(delta):
 	#Update stats for HUD

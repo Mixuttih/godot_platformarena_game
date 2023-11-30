@@ -29,5 +29,30 @@ offset_bottom = 475.0
 theme_override_font_sizes/font_size = 60
 text = "Stage 2"
 
+[node name="2PControls" type="Label" parent="."]
+offset_left = 1280.0
+offset_top = 704.0
+offset_right = 1664.0
+offset_bottom = 929.0
+theme_override_font_sizes/font_size = 30
+text = "2P Controls:
+[🡐] - Move left
+[🡒] - Move right
+[🡑] - Jump
+[Shift] - Dash"
+horizontal_alignment = 2
+
+[node name="1PControls" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 704.0
+offset_right = 460.0
+offset_bottom = 929.0
+theme_override_font_sizes/font_size = 30
+text = "1P Controls:
+[A] - Move left
+[D] - Move right
+[W] - Jump
+[Space] - Dash"
+
 [connection signal="pressed" from="Stage1" to="." method="_on_stage_1_pressed"]
 [connection signal="pressed" from="Stage2" to="." method="_on_stage_2_pressed"]

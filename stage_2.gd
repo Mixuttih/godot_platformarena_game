@@ -33,7 +33,7 @@ func _on_powerup_timer_timeout():
 	add_child(powerup)
 
 func _on_path_progress_timer_timeout():
-	path_follow_2d.progress_ratio += 0.003
+	path_follow_2d.progress_ratio += 0.002
 	
 
 func _on_stop_timer_timeout():

@@ -2,6 +2,8 @@ extends Node
 
 var stage = null
 
+var fullscreen = false
+
 var p1_health = 100
 var p1_stamina = 100
 var p1_power = 0
